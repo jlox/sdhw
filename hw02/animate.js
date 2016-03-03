@@ -1,6 +1,6 @@
 //Jeanne Locker
 //SoftDev2 pd3
-//HW2
+//HW02-03
 //2016-02-23
 
 var c = document.getElementById("playground");

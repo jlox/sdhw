@@ -1,0 +1,17 @@
+// Jeanne Locker and Felipe Mansilla
+
+var c = document.getElementById("ftb2maga");
+var ctx = c.getContext("2d");
+
+ctx.fillStyle = "#99ff99";
+ctx.fillRect (0,0,500,300);
+ctx.strokeStyle="#ff0000";
+ctx.strokeRect(30,15,200,150);
+
+//ctx.beginPath();
+//ctx.moveTo(100,100);
+//ctx.lineTo(200,200);
+//ctx.closepath();
+
+//ctx.stroke();
+//ctx.fill();
