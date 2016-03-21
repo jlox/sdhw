@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<style>
+.chart div{
+font: 10px sans-serif;
+background-color:#B0171F;
+text-align: right;
+padding:3px;
+margin:1px;
+color:white;
+}
+</style>
+<body>
+  <div class="chart"> </div>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="graphs.js"></script>
+</body>
