@@ -1,4 +1,43 @@
+lower="abcdefghijklmnopqrstuvwxyz"
+upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ints="0123456789"
+special=".?!&#,;:-_*"
 
+def strength_check(p):
+    l = [1 if x in upper else
+         2 if x in lower else
+         3 if x in ints else
+         0 for x in p]
+    return 1 in l and 2 in l and 3 in l
+
+p2 = 'password'
+p3 = 'passw0rd'
+p4 = 'Password'
+
+print p + ': ' + str(strength_check(p))
+print p2 + ': ' + str(strength_check(p2))
+print p3 + ': ' + str(strength_check(p3))
+print p4 + ': ' + str(strength_check(p4))
+
+def strength_rate(p):
+    l = [1 if x in upper else
+         2 if x in lower else
+         3 if x in ints else
+         4 if x in special else 0 for x in p]
+    uc = len(p) - l.count(1)
+    lc = len(p) - l.count(2)
+    nums = len(p) - l.count(3)
+    chrs = len(p) - l.count(4)
+
+    strength = (uc + lc + nums + chrs)
+    return strength
+
+print p + ': ' + str(strength_rate(p))
+print p2 + ': ' + str(strength_rate(p2))
+print p3 + ': ' + str(strength_rate(p3))
+print p4 + ': ' + str(strength_rate(p4))
+
+"""
 def good(p):
     lower="abcdefghijklmnopqrstuvwxyz"
     upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -71,3 +110,4 @@ UC_LETTERS="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 print [ x for x in p if x in UC_LETTERS ]
 print [ 1 for x in p if x in UC_LETTERS ] #returns 1 for each uppercase
 print [ 1 if x in UC_LETTERS else 0 for x in p ] #returns 1 for each uppercase, 0 for other, in order'''
+"""

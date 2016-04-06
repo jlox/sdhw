@@ -8,6 +8,15 @@ def repeat(thingy):
         return s
     return g
 
+
+"""
+def times(word):
+    def times(x):
+        return word*x
+    return times
+"""
+
+
 print repeat('hi')(3)
 print repeat('three?')(4)
 
