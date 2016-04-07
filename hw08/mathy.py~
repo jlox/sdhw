@@ -1,0 +1,6 @@
+import math
+
+def union(s1, s2):
+    return [x for x in s1+s2]
+
+print union([1, 2, 3], [2, 3, 4])
