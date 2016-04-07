@@ -26,4 +26,4 @@ print "Symmetric Difference Test: " + str(symDiff([1, 2, 3],[2, 3, 4]))
 def cartProd(a, b):
     return [[x, y] for x in a for y in b]
 
-print "Cartesion Product Test: "+ str(cartProd([1, 2], ['red', 'white']))
+print "Cartesian Product Test: "+ str(cartProd([1, 2], ['red', 'white']))
