@@ -27,3 +27,11 @@ def cartProd(a, b):
     return [[x, y] for x in a for y in b]
 
 print "Cartesian Product Test: "+ str(cartProd([1, 2], ['red', 'white']))
+
+def qsort(L):
+    if len(L) <=1:
+        return L
+    pivot = random.choice(L)
+    lh = [x for x in L if x < pivot]
+    uh = [x for x in L if x > pivot]
+    return qsort(lh) + ([pivot] * L.count(pivot)) + qsort(uh)

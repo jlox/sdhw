@@ -15,7 +15,7 @@ def timer(fn):
         return ttimey
     return timey
 
-@name
+#@name
 @timer
 def hello():
     return "hello world"
@@ -31,3 +31,14 @@ helloHTML = jello()
 
 print helloHTM
 print helloHTML
+
+
+@timer
+@name
+def quicksort(g):
+    if len(g) <=1:
+        return g
+    pivot = random.choice(g)
+    lower = [x for x in g if x < pivot]
+    upper = [x for x in g if x > pivot]
+    return quicksort(lower) + ([pivot]*g.count(pivot)) + quicksort(upper)
